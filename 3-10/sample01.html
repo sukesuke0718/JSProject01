@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <script type="text/javascript">
+      // 行を追加する
+      function insertItem(){
+        // 対象の要素を取得する
+        var container = document.getElementById("container");
+        // 作成
+        var item = document.createElement("li");
+        item.textContent = "hello";
+        // 追加
+        container.appendChild(item);
+      }
+      // 行を削除する
+      function removeItem(){
+        // 一番後ろの要素を取得
+        var item = container.lastChild;
+        if(item){
+          // 削除
+          container.removeChild(item);
+        }
+
+      }
+    </script>
+  </head>
+
+  <body>
+    <button onclick="insertItem()">insert</button>
+    <button onclick="removeItem()">delete</button>
+    <ol id = "container"></ol>
+
+  </body>
+</html>
