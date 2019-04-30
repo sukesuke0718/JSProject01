@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <script>
+      function clac(){
+          var w = document.getElementById("weight").value;      // 体重
+          var h = document.getElementById("height").value;      // 身長
+
+          // 入力判定
+          if(!w || !h){
+              document.getElementById("result").textContent = "入力してください";
+          }else{
+            var r = w / (h * h);                                  // BMI
+            document.getElementById("result").textContent = "あなたのBMI指数は" + r  + "です";
+          }
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>BMIの計算</h1>
+    体重（kg）:<input id="weight"/><br/>
+    身長（m） :<input id="height"/><br/>
+    計算:<button onclick="clac()">計算</button>
+    <p id="result"></p>
+  </body>
+
+</html>
