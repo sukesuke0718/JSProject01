@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>OXゲーム</title>
+
+    <style>
+      .cell{
+        width:100px;
+        height:100px;
+        font-size:50pt;
+        text-align:center;
+      }
+    </style>
+
+    <script type="text/javascript">
+      var count = 0;
+      function clickMe(e){
+        // 既に入力済みかどうか確認
+        if(!e.textContent){
+          // 偶数番目の場合
+          if(count++ % 2 == 0){
+            e.textContent = "〇";
+          // 奇数番目の場合
+          }else{
+            e.textContent = "✖";
+          }
+        }
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <table border="1">
+      <tr>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+      </tr>
+      <tr>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+      </tr>
+      <tr>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+        <td class="cell" onclick="clickMe(this);"></td>
+      </tr>
+    </table>
+
+  </body>
+
+</html>
