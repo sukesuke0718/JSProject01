@@ -15,12 +15,16 @@
     </style>
 
     <script type="text/javascript">
-      var ufo;
+
+      var ufo, newufo;
+      // 初期化
       function init(){
         // キーが押下された場合、keydown関数が実行される
         window.addEventListener("keydown", keydown);
         // オブジェクトを作成
-        ufo = new UFO(document.getElementById("ufo"), 100);
+        var ufo = new UFO(document.getElementById("ufo"), 100);
+        NewUFO.prototype = ufo;
+        newufo = new NewUFO(100);
       }
 
       function keydown(e){
@@ -30,6 +34,12 @@
         // キー：右
         }else if(e.keyCode == 39){
           ufo.moveRight();
+        // キー：上
+        }else if(e.keyCode == 38){
+          ufo.moveUp();
+        // キー：下
+        }else if(e.keyCode == 40){
+          ufo.moveDown();
         }
       }
 
@@ -49,6 +59,19 @@
         }
         // leftスタイルの値を更新
         this.elem.style.left = this.xpos + "px";
+      }
+
+      // NewUFOオブジェクト
+      function NewUFO(_ypos){
+        this.ypos = _ypos;
+        this.moveUp = function(){
+
+        }
+        this.moveDown = function(){
+
+        }
+
+
       }
 
     </script>
