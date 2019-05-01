@@ -24,24 +24,30 @@
       }
 
       function keydown(e){
+        // キー：左
         if(e.keyCode == 37){
           ufo.moveLeft();
+        // キー：右
         }else if(e.keyCode == 39){
           ufo.moveRight();
         }
       }
 
+      // UFOオブジェクト
       function UFO(_elem, _xpos){
-        this.elem = _elem;
-        this.xpos = _xpos;
+        this.elem = _elem;    // DOM要素
+        this.xpos = _xpos;    // x座標の値
         this.moveLeft = function(){
           this.xpos -= 10;
+          // leftスタイルの値を更新
           this.elem.style.left = this.xpos + "px";
         }
         this.moveRight = function(){
           this.xpos += 10;
+          // leftスタイルの値を更新
           this.elem.style.left = this.xpos + "px";
         }
+        // leftスタイルの値を更新
         this.elem.style.left = this.xpos + "px";
       }
 
