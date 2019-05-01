@@ -23,7 +23,9 @@
         window.addEventListener("keydown", keydown);
         // オブジェクトを作成
         var ufo = new UFO(document.getElementById("ufo"), 100);
+        // プロトタイプの関連付け
         NewUFO.prototype = ufo;
+        // オブジェクトの作成
         newufo = new NewUFO(100);
       }
 
