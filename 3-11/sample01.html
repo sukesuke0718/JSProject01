@@ -65,11 +65,14 @@
       function NewUFO(_ypos){
         this.ypos = _ypos;
         this.moveUp = function(){
-
+          this.ypos -= 10;
+          this.elem.style.top = this.ypos + "px";
         }
         this.moveDown = function(){
-
+          this.ypos += 10;
+          this.elem.style.top = this.ypos + "px";
         }
+        this.elem.style.top = this.ypos + "px";
       }
 
     </script>
